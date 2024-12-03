@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин кондитерских изделий</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    
+    <style>
+        .table-custom {
+            font-size: 0.9rem;
+            padding: 5px;
+        }
+
+        .table-custom th, .table-custom td {
+            padding: 8px 12px;
+        }
+
+        .login {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .login input {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+
+        .login button {
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="head4" class="text-center my-4">Магазин кондитерских изделий</h1>
+
+        <h3>Навигация:</h3>
+        <nav id="beg" class="mb-4">
+            <button class="btn btn-light" onclick="location.href='#head1'">Новинки</button>
+            <button class="btn btn-light" onclick="location.href='#head2'">Пищевая ценность</button>
+            <button class="btn btn-light" onclick="location.href='#head3'">Регистрация</button>
+        </nav>
+
+        <h3>Ассортимент:</h3>
+        <ol>
+            <li>Торты</li>
+            <li>Пончики</li>
+            <li>Эклеры</li>
+            <li>Диетические десерты
+               <ul type="square"> 
+                  <li>Пончики</li>
+                  <li>Эклеры</li>
+               </ul>
+            </li>
+            <li>Напитки</li>
+        </ol>
+
+        <h3 id="head1">Новинки:</h3>
+        <div class="row">
+            <div class="container mt-5">
+                <form action="https://www.bing.com/search" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+                    <input type="hidden"  name="q" value="search?"> 
+                    <h3>Ассортимент:</h3>
+                
+                    <div class="row">
+                        <!-- Торт Ромашка -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт1.jpeg" alt="Торт 'Ромашка'" class="card-img-top img-fluid" title="Торт 'Ромашка'" height="500">
+                                <div class="card-body">
+                                    <h5 class="card-title">Торт "Ромашка"</h5>
+                                    <p class="card-text">Цена: 3500 р.</p>
+                                    
+                                    <input type="number" name="amount1" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Эклеры Фисташковые -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт2.jpeg" alt="Эклеры Фисташковые" class="card-img-top img-fluid" title="Эклеры">
+                                <div class="card-body">
+                                    <h5 class="card-title">Фисташковые эклеры</h5>
+                                    <p class="card-text">Цена: 1200 р. (4 шт.)</p>
+                                    
+                                    <input type="number" name="amount2" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Тарталетка с пеканом -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт3.jpeg" alt="Тарталетка с пеканом" class="card-img-top img-fluid" title="Тарталетка">
+                                <div class="card-body">
+                                    <h5 class="card-title">Тарталетка с пеканом</h5>
+                                    <p class="card-text">Цена: 750 р.</p>
+                                    
+                                    <input type="number" name="amount3" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Ягодные капкейки -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт4.png" alt="Ягодные капкейки" class="card-img-top img-fluid" title="Ягодные капкейки">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ягодные капкейки</h5>
+                                    <p class="card-text">Цена: 2400 р. (6 шт.)</p>
+                                    
+                                    <input type="number" name="amount4" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Миндально-яблочная тарталетка -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт5.png" alt="Тарталетка миндально-яблочная" class="card-img-top img-fluid" title="Тарталетка миндально-яблочная">
+                                <div class="card-body">
+                                    <h5 class="card-title">Тарталетка Миндально-Яблочная</h5>
+                                    <p class="card-text">Цена: 2100 р. (6 шт.)</p>
+                                    
+                                    <input type="number" name="amount5" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Новогодний кекс -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="./торт6.jpg" alt="Новогодний кекс" class="card-img-top img-fluid" title="Новогодний кекс">
+                                <div class="card-body">
+                                    <h5 class="card-title">Новогодний кекс</h5>
+                                    <p class="card-text">Цена: 2200 р.</p>
+                                    
+                                    <input type="number" name="amount6" min="1" value="1" class="form-control mb-2" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="function" value="page">
+                    <input type="hidden" name="page_id" value="3">
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </form>
+            <br>
+            </div>
+        </div>
+
+        <h3 id="head2">Пищевая ценность диетических десертов (на 100 г.)</h3>
+        <table class="table table-bordered table-hover table-custom">
+            <thead>
+                <tr>
+                    <th>Десерт</th>
+                    <th>Белки (г.)</th>
+                    <th>Жиры (г.)</th>
+                    <th>Углеводы (г.)</th>
+                    <th>ККал</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <td>1. Пирожное чернослив-грецкий орех <br><br><a href="./пп1.html"><img src="./пп1.jpeg" alt="Пирожное чернослив-грецкий орех" width="100"></a></td>
+                    <td>3,4</td>
+                    <td>20,4</td>
+                    <td>12,4</td>
+                    <td>234,3</td>
+                </tr>
+                <tr align="center">
+                    <td>2. Пирожное шоколад-малина <br><br> <a href="./пп2.html"><img src="./пп2.jpg" alt="Пирожное шоколад-малина" width="100"></a></td>
+                    <td>4</td>
+                    <td>22,1</td>
+                    <td>21,8</td>
+                    <td>285</td>
+                </tr>
+                <tr align="center">
+                    <td>3. Пирожное шоколад-вишня <br><br> <a href="./пп3.html"><img src="./пп3.jpeg" alt="Пирожное шоколад-вишня" width="100"></a></td>
+                    <td>4,1</td> 
+                    <td>22,5</td>
+                    <td>24,9</td>
+                    <td>301,8</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <div>
+            <h3>Примечание:</h3>
+            <ul>
+                <li><a href="https://www.sport-express.ru/zozh/reviews/bzhu-chto-eto-takoe-kak-pravilno-rasschityvat-normu-pochemu-eto-vazhno-1946582/" target="_blank">норма белков, жиров и углеводов</a></li>
+                <li><a href="https://zozhnik.ru/calc_pfc/" target="_blank">калькулятор БЖУ</a></li>
+                <li><a href="https://clinic-cvetkov.ru/blog/kalkulyator-sutochnoy-normy-kaloriy/" target="_blank">калькулятор ккал</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="head3" class="login">
+            <form action="https://www.bing.com/search" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+                <input type="hidden"  name="q" value="search?">
+                <h3>Форма регистрации</h3>
+                <div class="mb-3">
+                    <label for="surname" class="form-label">Фамилия</label>
+                    <input type="text" name="surname" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Имя</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="patronymic" class="form-label">Отчество</label>
+                    <input type="text" name="patronymic" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Возраст</label>
+                    <input type="number" name="age" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Место проживания</label>
+                    <div>
+                        <input type="radio" name="place" value="Moscow"> Москва
+                        <input type="radio" name="place" value="Saint-Petersburg" checked> Санкт-Петербург
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Дата рождения</label>
+                    <input type="date" name="date" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Почта</label>
+                    <input type="email" name="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Пароль</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <input type="hidden" name="function" value="page">
+                <input type="hidden" name="page_id" value="3">
+                <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+        <br><br>
+        <div class="text-center">
+            <button class="btn btn-light" onclick="location.href='#beg'">К началу</button>
+        </div>
+
+        <hr>
+
+        <div>
+            <p>Контакты:</p>
+            <a href="https://t.me/sonyatssareva" target="_blank"><img src="./тг.png" alt='tg' height="70" width="70"></a>
+            <a href="https://vk.com/id606462063" target="_blank"><img src="./вк.png" alt='vk' height="70" width="70"></a>
+        </div>
+    </div>
+</body>
+</html>
