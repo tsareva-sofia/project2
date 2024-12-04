@@ -1,2 +1,1 @@
-[
-](https://tsareva-sofia.github.io/project2/)
+https://tsareva-sofia.github.io/project2/
