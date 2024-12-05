@@ -7,29 +7,9 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    
     <style>
-        .table-custom {
-            font-size: 0.9rem;
-            padding: 5px;
-        }
-        .table-custom th, .table-custom td {
-            padding: 8px 12px;
-        }
-        .login {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-        }
-        .login input {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
-        .login button {
-            font-size: 1rem;
-            padding: 10px 15px;
+        input:hover {
+            background-color: azure;
         }
     </style>
 </head>
@@ -38,7 +18,7 @@
         <h1 id="head4" class="text-center my-4">Магазин кондитерских изделий</h1>
 
         <h3>Навигация:</h3>
-        <nav id="beg" class="mb-4">
+        <nav id="beg" class="mb-4 d-flex justify-content-start gap-3">
             <button class="btn btn-light" onclick="location.href='#head1'">Новинки</button>
             <button class="btn btn-light" onclick="location.href='#head2'">Пищевая ценность</button>
             <button class="btn btn-light" onclick="location.href='#head3'">Регистрация</button>
@@ -60,80 +40,92 @@
 
         <h3 id="head1">Новинки:</h3>
 
-        <div class="d-flex justify-content-between mb-4">
+        <div class="d-flex justify-content-start mb-4">
             <button class="btn btn-info" onclick="sortByName()">Сортировать по имени</button>
             <button class="btn btn-info" onclick="sortByPrice()">Сортировать по цене</button>
         </div>
 
-        <div class="row" id="product-list">
-            <div class="col-md-4 mb-4" data-name="Торт Ромашка" data-price="3500">
-                <div class="card">
-                    <img src="./торт1.jpeg" alt="Торт 'Ромашка'" class="card-img-top img-fluid" title="Торт 'Ромашка'" height="500">
-                    <div class="card-body">
-                        <h5 class="card-title">Торт "Ромашка"</h5>
-                        <p class="card-text">Цена: 3500 р.</p>
-                        <input type="number" name="amount1" min="0" value="0" class="form-control mb-2">
-                    </div>
-                </div>
-            </div>
+        <br>
 
-            <div class="col-md-4 mb-4" data-name="Эклеры Ассорти" data-price="1200">
-                <div class="card">
-                    <img src="./торт2.jpg" alt="Эклеры Ассорти" class="card-img-top img-fluid" title="Эклеры">
-                    <div class="card-body">
-                        <h5 class="card-title">Эклеры Ассорти</h5>
-                        <p class="card-text">Цена: 1200 р. (4 шт.)</p>
-                        <input type="number" name="amount2" min="0" value="0" class="form-control mb-2">
-                    </div>
-                </div>
-            </div>
+        <div id="product-list" class="row d-flex flex-wrap justify-content-between" bgcolor="blue">
+            <form action="https://www.bing.com/search?" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+                <input type="hidden" name="q" value="search?">
+                
 
-            <div class="col-md-4 mb-4" data-name="Тарталетка с пеканом" data-price="750">
-                <div class="card">
-                    <img src="./торт3.jpeg" alt="Тарталетка с пеканом" class="card-img-top img-fluid" title="Тарталетка">
-                    <div class="card-body">
-                        <h5 class="card-title">Тарталетка с пеканом</h5>
-                        <p class="card-text">Цена: 750 р.</p>
-                        <input type="number" name="amount3" min="0" value="0" class="form-control mb-2">
+                <div class="col-md-4 mb-4 " data-name="Торт Ромашка" data-price="3500">
+                    <div class="card">
+                        <img src="./торт1.jpeg" alt="Торт 'Ромашка'" class="card-img-top img-fluid" title="Торт 'Ромашка'" height="500">
+                        <div class="card-body">
+                            <h5 class="card-title">Торт "Ромашка"</h5>
+                            <p class="card-text">Цена: 3500 р.</p>
+                            <input type="number" name="amount1" min="0" value="0" class="form-control mb-2">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 mb-4" data-name="Ягодные капкейки" data-price="2400">
-                <div class="card">
-                    <img src="./торт4.png" alt="Ягодные капкейки" class="card-img-top img-fluid" title="Ягодные капкейки">
-                    <div class="card-body">
-                        <h5 class="card-title">Ягодные капкейки</h5>
-                        <p class="card-text">Цена: 2400 р. (6 шт.)</p>
-                        <input type="number" name="amount4" min="0" value="0" class="form-control mb-2">
+                <div class="col-md-4 mb-4" data-name="Эклеры Ассорти" data-price="1200">
+                    <div class="card">
+                        <img src="./торт2.jpg" alt="Эклеры Ассорти" class="card-img-top img-fluid" title="Эклеры">
+                        <div class="card-body">
+                            <h5 class="card-title">Эклеры Ассорти</h5>
+                            <p class="card-text">Цена: 1200 р. (4 шт.)</p>
+                            <input type="number" name="amount2" min="0" value="0" class="form-control mb-2">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 mb-4" data-name="Тарталетка Миндально-Яблочная" data-price="2100">
-                <div class="card">
-                    <img src="./торт5.png" alt="Тарталетка миндально-яблочная" class="card-img-top img-fluid" title="Тарталетка миндально-яблочная">
-                    <div class="card-body">
-                        <h5 class="card-title">Тарталетка Миндально-Яблочная</h5>
-                        <p class="card-text">Цена: 2100 р. (6 шт.)</p>
-                        <input type="number" name="amount5" min="0" value="0" class="form-control mb-2">
+                <div class="col-md-4 mb-4" data-name="Тарталетка с пеканом" data-price="750">
+                    <div class="card">
+                        <img src="./торт3.jpeg" alt="Тарталетка с пеканом" class="card-img-top img-fluid" title="Тарталетка">
+                        <div class="card-body">
+                            <h5 class="card-title">Тарталетка с пеканом</h5>
+                            <p class="card-text">Цена: 750 р.</p>
+                            <input type="number" name="amount3" min="0" value="0" class="form-control mb-2">
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 mb-4" data-name="Новогодний кекс" data-price="2200">
-                <div class="card">
-                    <img src="./торт6.jpg" alt="Новогодний кекс" class="card-img-top img-fluid" title="Новогодний кекс">
-                    <div class="card-body">
-                        <h5 class="card-title">Новогодний кекс</h5>
-                        <p class="card-text">Цена: 2200 р.</p>
-                        <input type="number" name="amount6" min="0" value="0" class="form-control mb-2">
+                <div class="col-md-4 mb-4" data-name="Ягодные капкейки" data-price="2400">
+                    <div class="card">
+                        <img src="./торт4.png" alt="Ягодные капкейки" class="card-img-top img-fluid" title="Ягодные капкейки">
+                        <div class="card-body">
+                            <h5 class="card-title">Ягодные капкейки</h5>
+                            <p class="card-text">Цена: 2400 р. (6 шт.)</p>
+                            <input type="number" name="amount4" min="0" value="0" class="form-control mb-2">
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-4 mb-4" data-name="Тарталетка Миндально-Яблочная" data-price="2100">
+                    <div class="card">
+                        <img class="photo" src="./торт5.png" alt="Тарталетка миндально-яблочная" class="card-img-top img-fluid" title="Тарталетка миндально-яблочная">
+                        <div class="card-body">
+                            <h5 class="card-title">Тарталетка Миндально-Яблочная</h5>
+                            <p class="card-text">Цена: 2100 р. (6 шт.)</p>
+                            <input type="number" name="amount5" min="0" value="0" class="form-control mb-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4" data-name="Новогодний кекс" data-price="2200">
+                    <div class="card">
+                        <img src="./торт6.jpg" alt="Новогодний кекс" class="card-img-top img-fluid" title="Новогодний кекс">
+                        <div class="card-body">
+                            <h5 class="card-title">Новогодний кекс</h5>
+                            <p class="card-text">Цена: 2200 р.</p>
+                            <input type="number" name="amount6" min="0" value="0" class="form-control mb-2">
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
 
-        <!-- Примечание -->
+        <div>
+            <input type="hidden" name="function" value="page">
+            <input type="hidden" name="page_id" value="3">
+            <button class="btn btn-primary" type="submit" form="UserEnter">Отправить</button>
+        </div>
+
         <h3 id="head2">Пищевая ценность диетических десертов (на 100 г.)</h3>
         <table class="table table-bordered table-hover table-custom">
             <thead>
@@ -184,8 +176,8 @@
         <hr>
 
         <div id="head3" class="login">
-            <form action="https://www.bing.com/search" method="GET" id="UserEnter" name="UserEnter" target="_blank">
-                <input type="hidden"  name="q" value="search?">
+            <form action="https://www.bing.com/search?" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+                <input type="hidden"  name="q" value="search?"> 
                 <h3>Форма регистрации</h3>
                 <div class="mb-3">
                     <label for="surname" class="form-label">Фамилия</label>
@@ -270,4 +262,4 @@
         }
     </script>
 </body>
-</html>
+</html> 
